@@ -1,0 +1,37 @@
+{
+  "name": "user_management",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node -r tsconfig-paths/register src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrii-02/User_Management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrii-02/User_Management/issues"
+  },
+  "homepage": "https://github.com/adrii-02/User_Management#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.0"
+  }
+}

@@ -108,6 +108,17 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+
+    /* Añadimos Alias para las rutas absolutas en las importaciones de los ficheros. */
+    "baseUrl": "./src",
+    "paths": {
+      "@models/*": ["models/*"],
+      "@services/*": ["services/*"],
+      "@controllers/*": ["controllers/*"],
+      "@repositories/*": ["repositories/*"],
+      "@routes/*": ["routes/*"]
+    }
+  
   }
 }

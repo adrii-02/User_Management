@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug TypeScript Backend",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/app.ts"
+      ],
+      "cwd": "${workspaceFolder}",
+      //"protocol": "inspector",
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+      },
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
+      "outFiles": []
+    }
+  ]
+}
