@@ -1,12 +1,33 @@
-import User, { IUser } from '@models/User';
+import { UserModel, IUser } from '@models/User';
 
-// Listar todos los usuarios de la base de datos
-export const findAllUsers = async (): Promise<IUser[]> => {
-    return await User.find();
-};
+export class UserRepository {
+  async createUser(data: Partial<IUser>): Promise<IUser> {
+    const user = new UserModel(data);
+    return await user.save();
+  }
 
-// Creación de usuario en base de datos
-export const createUser = async (data: Partial<IUser>): Promise<IUser> => {
-  const user = new User(data);
-  return await user.save();
-};
+  async findAll(): Promise<IUser[]> {
+    return await UserModel.find();
+  }
+
+  async findById(id: string): Promise<IUser | null> {
+    return await UserModel.findById(id);
+  }
+
+  async updateById(id: string, data: Partial<IUser>): Promise<IUser | null> {
+    return await UserModel.findByIdAndUpdate(id, data, { new: true });
+  }
+
+  async deleteById(id: string): Promise<IUser | null> {
+    return await UserModel.findByIdAndDelete(id);
+  }
+
+  async findByEmail(email: string): Promise<IUser | null> {
+  return UserModel.findOne({ email });
+}
+
+  async findByPhoneNumber(phone: number): Promise<IUser | null> {
+    return UserModel.findOne({ PhoneNumber: phone });
+  }
+
+}

@@ -14,4 +14,4 @@ const UserSchema: Schema = new Schema({
   PhoneNumber: { type: Number, required: true },
 });
 
-export default mongoose.model<IUser>('User', UserSchema);
+export const UserModel = mongoose.model<IUser>('User', UserSchema);

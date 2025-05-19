@@ -7,7 +7,6 @@
     "build": "tsc",
     "start": "node dist/app.js"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adrii-02/User_Management.git"
